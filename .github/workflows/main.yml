@@ -1,4 +1,4 @@
-name: CI
+name: GreetingApp
 
 on:
   push:
