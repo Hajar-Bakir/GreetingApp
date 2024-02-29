@@ -4,14 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greeting Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0; /* Hintergrundfarbe setzen */
+        }
+
+        #content {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1><Greeting-App></h1>
-    <label for="nameInput">Enter your name:</label>
-    <input type="text" id="nameInput">
-    <button onclick="submitName()">Submit</button>
-    <p id="greetingMessage"></p>
+    <div id="content">
+        <h1>Greeting App</h1>
+        <label for="nameInput">Enter your name:</label>
+        <input type="text" id="nameInput">
+        <button onclick="submitName()">Submit</button>
+        <p id="greetingMessage"></p>
+    </div>
     <script src="greetingApp.js"></script>
-
 </body>
 </html>
