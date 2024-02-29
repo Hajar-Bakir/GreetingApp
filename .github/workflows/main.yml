@@ -23,7 +23,7 @@ jobs:
 
     - name: Build and start server
       run: npm start
-      background: true
+   
 
     - name: Run tests
       run: npm test
