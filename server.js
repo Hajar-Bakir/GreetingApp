@@ -1,16 +1,10 @@
-// Laden des Express-Moduls
-const express = require("express");
+// server.js
+const express = require('express');
+const app = express();
+const port = 3000;
 
-// Portnummer für den Server wird hier festgelegt!
-const port = process.env.PORT || 5500;
+app.use(express.static('public'));
 
-// Express-Anwendung wird erstellt und in die Variable "app" importiert.
-let app = express();
-
-// Middleware, um statische Dateien aus dem "frontend" Ordner bereitzustellen
-app.use(express.static('greetingAPP'));
-
-// Server starten und auf Verbindungen auf dem angegebenen Port warten
 app.listen(port, () => {
-  console.log(`Server läuft auf Port ${port}`);
+  console.log(`Server running at http://localhost:${port}`);
 });
