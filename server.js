@@ -1,10 +1,18 @@
-// server.js
-const express = require('express');
-const app = express();
-const port = 3000;
+//importiert Espress module ---> const name = nameframework
+const express = require("express");
+// arbeit port für server festgelegt
+const PORT =process.env.PORT || 5505;
 
-app.use(express.static('public'));
+// Express anwendung wir erstell und in die Variable app importiert
+let app = express();
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+// alle dateien die im ordner "frontent" enthalten sind
+// werden an den Uder 'ohne weiter verarbeitung' weitergeleigt
+app.use(express.static('greetingApp'));
+
+//sobald server gestartet ist, wird eine meldung auf der 
+//konsole ausgegeben.
+app.listen(PORT, ()=> {
+    console.log("server auf port", PORT);
+
 });
